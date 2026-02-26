@@ -1,0 +1,102 @@
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience__container > div {
+  background: var(--color-bg-varient);
+  padding: 2rem 2rem;
+  /* width: 70%; */
+  border: 5px solid transparent;
+  border-radius: 4rem;
+  transition: var(--transition);
+  /* text-align: center; */
+}
+.experience__container > div:hover {
+  background: rgba(79, 79, 85, 0.4);
+  border: 5px solid var(--color-primary-varient);
+  transition: var(--transition);
+}
+
+.experience__container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.1rem;
+}
+
+.experience__details {
+  display: flex;
+  gap: 1rem;
+}
+.experience__detail-icons {
+  position: relative;
+  top: 2rem;
+  color: var(--color-primary);
+}
+.experience__detail h4,
+small {
+  position: relative;
+  left: 1.5rem;
+}
+
+/* =========Media Query========= */
+@media (max-width: 600px) {
+  .experience__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .experience__frontend {
+    width: 127%;
+    position: relative;
+    right: 2.4rem;
+  }
+  .experience__frontend .experience__content {
+    width: 100%;
+    /* padding: 0; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* justify-content: space-between; */
+    /* gap: 1rem; */
+    column-gap: 2rem, 2rem;
+    font-size: 13px;
+    height: 247px;
+    position: relative;
+    bottom: 2rem;
+  }
+  .experience__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .experience__backend {
+    width: 127%;
+    position: relative;
+    right: 2.4rem;
+  }
+  .experience__backend .experience__content {
+    width: 100%;
+    /* padding: 0; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* justify-content: space-between; */
+    /* gap: 1rem; */
+    column-gap: 2rem, 2rem;
+    font-size: 13px;
+    height: 178px;
+    position: relative;
+    bottom: 2rem;
+  }
+  #experience {
+    position: relative;
+    top: 9rem;
+  }
+}

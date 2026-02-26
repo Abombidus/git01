@@ -1,0 +1,126 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__me {
+  width: 80%;
+  position: relative;
+  bottom: 2rem;
+  left: 1.3rem;
+  /* aspect-ratio: 1/1; */
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  display: grid;
+  place-items: center;
+}
+
+.about__me_img {
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: var(--transition);
+  transform: rotate(11deg);
+}
+
+.about__me_img:hover {
+  transform: rotate(0deg);
+  transition: var(--transition);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.about__card {
+  background: var(--color-bg-varient);
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  padding: 0.2rem;
+  /* text-align: center; */
+  /* width: fit-content; */
+  /* overflow: hidden; */
+}
+
+.about__card:hover {
+  transition: var(--transition);
+  background: transparent;
+  border: 3px solid var(--color-primary-varient);
+}
+
+.about__icon {
+  position: relative;
+  left: calc(39%);
+  font-size: 1.4rem;
+  /* margin-bottom: 0.5rem; */
+  color: var(--color-primary);
+}
+.about__card h5 {
+  font-size: 0.95rem;
+  position: relative;
+  left: calc(21%);
+}
+.about__card small {
+  font-size: 0.7rem;
+  position: relative;
+  left: calc(14%);
+  color: var(--color-light);
+}
+.about__content p {
+  margin: 1.5rem 0 2rem;
+  color: var(--color-light);
+}
+
+.about__content a {
+  margin-top: 1.5rem;
+}
+
+/* ======== Media Query FFor Small Devices */
+@media (max-width: 600px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+  .about__me {
+    width: 126%;
+    background: none;
+    position: relative;
+  }
+  .about__cards {
+    font-size: 8px;
+    width: 128%;
+    position: relative;
+    right: 2.6rem;
+    bottom: 6.1rem;
+  }
+  .about__card small {
+    /* text-align: center; */
+    font-size: 9.4px;
+  }
+  .about__content p {
+    font-size: 0.5rem;
+    position: relative;
+    bottom: 7.1rem;
+  }
+  .about__content a {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 9rem;
+    left: 5.8rem;
+  }
+  #about {
+    position: relative;
+    top: 3rem;
+  }
+  .about__me_img {
+    position: relative;
+    right: 3.65rem;
+    transform: rotate(0deg);
+  }
+}

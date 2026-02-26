@@ -1,0 +1,131 @@
+.container .contact__container {
+  width: 26%;
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  gap: 12%;
+}
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.contact__option {
+  background: var(--color-bg-varient);
+  padding: 1.2rem;
+  border-radius: 1.3rem;
+  /* text-align: center; */
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.contact__option:hover {
+  background: var(--color-blur);
+  border: 1px solid var(--color-primary-varient);
+}
+
+.contact__container {
+  display: flex;
+  gap: 7rem;
+}
+.contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ++++++++++++++ FORM ++++++ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+input,
+textarea {
+  width: 40rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-primary-varient);
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 17px;
+  color: rgb(151, 151, 150);
+}
+
+.log form button {
+  width: fit-content;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  position: relative;
+  bottom: 0.6rem;
+  left: 17.5rem;
+  text-align: center;
+}
+textarea {
+  height: 9rem;
+}
+
+/* small {
+  border: 1px solid var(--color-gray);
+  padding: 0.2rem;
+  border-radius: 3rem;
+  color: var(--color-gray);
+  background: var(--color-blur);
+  position: relative;
+  bottom: 0rem;
+}
+
+small:hover {
+  border: 1px solid var(--color-black);
+  background: greenyellow;
+  color: var(--color-black);
+}
+.log {
+  background: var(--color-gray);
+  padding: 1.2rem;
+  height: fit-content;
+  border-radius: 2rem;
+} */
+
+/* ======= Media Query ======= */
+@media (max-width: 600px) {
+  #contact {
+    position: relative;
+    top: 107rem;
+  }
+  .contact__container {
+    display: grid;
+    /* width: 100%; */
+    grid-template-columns: 1fr;
+  }
+  .contact__options {
+    position: relative;
+    right: 2.4rem;
+  }
+  .contact__option {
+    width: 170.2%;
+    position: relative;
+    left: 1.2rem;
+    text-align: center;
+  }
+  input,
+  textarea {
+    width: 120%;
+    position: relative;
+    right: 2rem;
+  }
+  .log {
+    position: relative;
+    /* bottom: 0.6rem; */
+  }
+  .log form button {
+    position: relative;
+    left: 7.1rem;
+    bottom: 0rem;
+  }
+}
